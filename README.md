@@ -1,6 +1,6 @@
 # STM32 DS18S20 MQTT Bridge
 
-A compact, flash‑optimized firmware for an STM32F103 ("Blue Pill" 64KB flash / 20KB SRAM) that discovers multiple DS18S20 temperature sensors on up to four 1‑Wire buses and publishes data to an MQTT broker with Home Assistant auto‑discovery. Includes a minimal embedded web UI for network + MQTT configuration, EEPROM persistence with CRC16 integrity, watchdog safety, reboot + factory reset options, and automatic link recovery.
+An Arduino-based firmware for the STM32F103 ("Blue Pill" 64KB flash / 20KB SRAM), compact and flash‑optimized, that discovers multiple DS18S20 temperature sensors on up to four 1‑Wire buses and publishes data to an MQTT broker with Home Assistant auto‑discovery. Built with the Arduino IDE and STM32 core, it includes a minimal embedded web UI for network + MQTT configuration, EEPROM persistence with CRC16 integrity, watchdog safety, reboot + factory reset options, and automatic link recovery.
 
 ### Why STM32?
 The primary motivation for choosing the STM32F103 was its **5V‑tolerant GPIO pins**. Reliable 1‑Wire communication over very long, multi‑sensor cable runs requires 5V signaling levels. Unlike most ARM boards (and the ESP family) that are strictly 3.3V, the Blue Pill's 5V‑tolerant inputs allow direct connection to a 5V 1‑Wire bus without level shifters — simplifying wiring and improving signal integrity over long distances.
